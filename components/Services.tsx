@@ -1,12 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { InlineCTA } from './InlineCTA';
 
 const services = [
   {
     icon: '🏥',
     title: 'Enfermería',
-    description: 'Cuidados médicos especializados 24/7 en el domicilio con protocolos de calidad asistencial.',
+    description: 'Cuidados médicos especializados en el domicilio con protocolos de calidad asistencial.',
   },
   {
     icon: '💪',
@@ -24,11 +25,6 @@ const services = [
     description: 'Adaptación del entorno y recuperación funcional para vida independiente.',
   },
   {
-    icon: '🧠',
-    title: 'Psicología',
-    description: 'Apoyo emocional y psicológico para pacientes y familias durante el proceso de recuperación.',
-  },
-  {
     icon: '🥗',
     title: 'Nutrición',
     description: 'Planes nutricionales personalizados según patología y necesidades específicas.',
@@ -37,8 +33,8 @@ const services = [
 
 export function Services() {
   return (
-    <section className="section-padding bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent">
-      <div className="container-max">
+    <section id="servicios" className="section-padding bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent">
+      <div className="container-max mb-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,11 +42,14 @@ export function Services() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+          <span className="text-cyan-600 font-bold text-sm uppercase tracking-wider">
+            Nuestro equipo
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-4 text-gray-900">
             Servicios Especializados
           </h2>
-          <p className="text-lg text-text-light max-w-2xl">
-            Contamos con profesionales certificados en diferentes disciplinas para brindar atención integral adaptada a cada paciente.
+          <p className="text-lg text-gray-900 max-w-2xl">
+            Profesionales certificados en diferentes disciplinas, coordinados para brindar atención integral adaptada a cada paciente.
           </p>
         </motion.div>
 
@@ -60,27 +59,49 @@ export function Services() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
               viewport={{ once: true }}
-              whileHover={{ y: -15 }}
-              className="group relative p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300"
+              whileHover={{ y: -8 }}
+              className="group relative p-7 rounded-2xl bg-white border border-gray-100 hover:border-cyan-300 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-cyan-500/10"
             >
-              {/* Glow on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 rounded-2xl transition-all duration-300"></div>
+              <span className="absolute top-5 right-6 text-5xl font-black text-gray-50 select-none group-hover:text-cyan-50 transition-colors">
+                {String(index + 1).padStart(2, '0')}
+              </span>
 
               <div className="relative z-10">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-2">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-100 border border-cyan-200/60 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:shadow-md group-hover:shadow-cyan-500/20 transition-all duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-text-light leading-relaxed">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   {service.description}
                 </p>
+                <a
+                  href={`https://wa.me/5493816372613?text=${encodeURIComponent(
+                    `Hola, quisiera consultar sobre el servicio de ${service.title}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-cyan-600 hover:text-cyan-700 transition-colors"
+                >
+                  Consultar disponibilidad
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      <InlineCTA
+        text="¿No estás seguro qué servicio necesitás? Contanos el caso."
+        message="Hola, no estoy seguro qué servicio necesito. Quisiera que me asesoren"
+        button="Pedir asesoramiento"
+      />
     </section>
   );
 }

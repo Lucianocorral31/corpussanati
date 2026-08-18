@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { LoadingScreen } from '@/components/LoadingScreen';
+import { ScrollProgress } from '@/components/ScrollProgress';
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
     url: 'https://corpussanati.com',
     siteName: 'Corpus Sanati',
     title: 'Corpus Sanati - Atención Domiciliaria Integral',
-    description: 'Servicios profesionales de atención domiciliaria en Tucumán. Equipo multidisciplinario de enfermería, kinesiología, psicología y más.',
+    description: 'Servicios profesionales de atención domiciliaria en Tucumán. Equipo multidisciplinario de enfermería, kinesiología y más.',
     images: [
       {
         url: 'https://corpussanati.com/og-image.jpg',
@@ -94,7 +97,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-dark-bg text-text-lighter">{children}</body>
+      <body className="bg-white text-gray-900">
+        <LoadingScreen />
+        <ScrollProgress />
+        {children}
+        <FloatingWhatsApp />
+      </body>
     </html>
   );
 }

@@ -12,10 +12,10 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl overflow-hidden p-12 md:p-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/15 border-2 border-cyan-500/40"
+          className="relative rounded-2xl overflow-hidden p-12 md:p-16 bg-gradient-to-br from-cyan-100 to-blue-100 border-2 border-cyan-300"
         >
           {/* Animated background element */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10 animate-float"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl -z-10 animate-float"></div>
 
           <div className="relative z-10 text-center max-w-3xl mx-auto">
             <motion.h2
@@ -23,9 +23,9 @@ export function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold text-white mb-4"
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
             >
-              ¿Necesitas Atención Domiciliaria?
+              ¿Tenés alguna consulta?
             </motion.h2>
 
             <motion.p
@@ -33,9 +33,9 @@ export function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-lg text-text-lighter mb-8 leading-relaxed"
+              className="text-lg text-gray-700 mb-8 leading-relaxed"
             >
-              Contacta con nuestro equipo profesional ahora. Estamos disponibles de lunes a viernes de 8 a 14hs.
+              Ante cualquier duda o consulta, escribinos un mensaje. Estamos disponibles de lunes a viernes de 8 a 14hs para ayudarte.
             </motion.p>
 
             <motion.div
@@ -49,15 +49,9 @@ export function CTA() {
                 href="https://wa.me/5493816372613"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg hover:shadow-glow transition-all duration-300 hover:scale-105 text-center"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105 text-center"
               >
-                WhatsApp Ahora
-              </a>
-              <a
-                href="tel:+5493816372613"
-                className="px-8 py-4 bg-white/10 border-2 border-white/30 text-white font-bold rounded-lg hover:bg-white/20 transition-all duration-300 text-center"
-              >
-                Llamar
+                Escribir por WhatsApp
               </a>
             </motion.div>
           </div>

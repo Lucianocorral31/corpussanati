@@ -32,7 +32,7 @@ const locations = [
 
 export function Locations() {
   return (
-    <section className="section-padding bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent">
+    <section id="oficinas" className="section-padding bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export function Locations() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
             Nuestras Oficinas
           </h2>
-          <p className="text-lg text-text-light max-w-2xl">
+          <p className="text-lg text-gray-900 max-w-2xl">
             Ubicadas estratégicamente en Tucumán para atender mejor a nuestros pacientes. Visítanos o contáctanos.
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ export function Locations() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -15 }}
-              className="group relative rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300"
+              className="group relative rounded-2xl overflow-hidden bg-white border-2 border-cyan-200 hover:border-cyan-400 transition-all duration-300 shadow-sm hover:shadow-md"
             >
               {/* Top bar */}
               <div className="h-1 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
@@ -67,22 +67,22 @@ export function Locations() {
                 {/* Icon and Title */}
                 <div className="mb-6">
                   <div className="text-4xl mb-3">{location.icon}</div>
-                  <h3 className="text-2xl font-bold text-cyan-400">
+                  <h3 className="text-2xl font-bold text-cyan-700">
                     {location.title}
                   </h3>
-                  <p className="text-sm text-text-light font-medium mt-1">
+                  <p className="text-sm text-gray-900 font-medium mt-1">
                     {location.subtitle}
                   </p>
                 </div>
 
                 {/* Info */}
-                <div className="space-y-4 mb-6 border-t border-cyan-500/10 pt-6">
+                <div className="space-y-4 mb-6 border-t border-gray-200 pt-6">
                   {location.address && (
                     <div>
-                      <p className="text-xs text-cyan-400 font-bold uppercase tracking-wide mb-1">
+                      <p className="text-xs text-cyan-700 font-bold uppercase tracking-wide mb-1">
                         📍 Dirección
                       </p>
-                      <p className="text-text-lighter font-medium">
+                      <p className="text-gray-700 font-medium">
                         {location.address}
                         {location.city && <br />}
                         {location.city}
@@ -92,26 +92,28 @@ export function Locations() {
 
                   {location.phone && (
                     <div>
-                      <p className="text-xs text-cyan-400 font-bold uppercase tracking-wide mb-1">
-                        📱 Teléfono
+                      <p className="text-xs text-cyan-700 font-bold uppercase tracking-wide mb-1">
+                        📱 WhatsApp
                       </p>
-                      <Link
-                        href={`tel:${location.phone}`}
-                        className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                      <a
+                        href="https://wa.me/5493816372613"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cyan-700 hover:text-cyan-900 font-medium transition-colors"
                       >
                         {location.phone}
-                      </Link>
+                      </a>
                     </div>
                   )}
 
                   {location.email && (
                     <div>
-                      <p className="text-xs text-cyan-400 font-bold uppercase tracking-wide mb-1">
+                      <p className="text-xs text-cyan-700 font-bold uppercase tracking-wide mb-1">
                         ✉️ Email
                       </p>
                       <Link
                         href={`mailto:${location.email}`}
-                        className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                        className="text-cyan-700 hover:text-cyan-900 font-medium transition-colors"
                       >
                         {location.email}
                       </Link>
@@ -119,14 +121,14 @@ export function Locations() {
                   )}
 
                   <div>
-                    <p className="text-xs text-cyan-400 font-bold uppercase tracking-wide mb-1">
+                    <p className="text-xs text-cyan-700 font-bold uppercase tracking-wide mb-1">
                       🕐 Horario
                     </p>
-                    <p className="text-text-lighter font-medium">{location.hours}</p>
+                    <p className="text-gray-700 font-medium">{location.hours}</p>
                   </div>
                 </div>
 
-                {/* Buttons */}
+                {/* Button */}
                 <div className="flex gap-3">
                   <a
                     href="https://wa.me/5493816372613"
@@ -135,12 +137,6 @@ export function Locations() {
                     className="flex-1 px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold rounded-lg hover:shadow-glow transition-all duration-300 text-center text-sm"
                   >
                     💬 WhatsApp
-                  </a>
-                  <a
-                    href="tel:+5493816372613"
-                    className="flex-1 px-4 py-3 bg-cyan-500/20 border-2 border-cyan-500 text-cyan-400 font-bold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 text-center text-sm"
-                  >
-                    ☎ Llamar
                   </a>
                 </div>
               </div>

@@ -1,6 +1,8 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
+import { StatsBar } from '@/components/StatsBar';
 import { Services } from '@/components/Services';
+import { Process } from '@/components/Process';
 import { Criteria } from '@/components/Criteria';
 import { Objectives } from '@/components/Objectives';
 import { Coverage } from '@/components/Coverage';
@@ -14,12 +16,14 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <StatsBar />
         <Services />
+        <Process />
         <Criteria />
         <Objectives />
         <Coverage />
-        <CTA />
         <Locations />
+        <CTA />
       </main>
       <Footer />
     </>

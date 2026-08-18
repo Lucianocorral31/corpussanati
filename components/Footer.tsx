@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-dark-bg/50 backdrop-blur border-t border-cyan-500/10">
+    <footer className="bg-gray-900/95 backdrop-blur border-t border-gray-700">
       <div className="container-max px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company */}
@@ -36,10 +36,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="tel:+5493816372613"
+                  href="https://wa.me/5493816372613"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  📱 +54 9 3816 37-2613
+                  💬 +54 9 3816 37-2613
                 </a>
               </li>
               <li>
@@ -48,16 +50,6 @@ export function Footer() {
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   ✉️ corpussanati@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/5493816372613"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  💬 WhatsApp
                 </a>
               </li>
             </ul>
@@ -96,8 +88,8 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-cyan-500/10 pt-8 text-center">
-          <p className="text-text-light text-sm">
+        <div className="border-t border-gray-700 pt-8 text-center">
+          <p className="text-gray-400 text-sm">
             &copy; 2024 Corpus Sanati SRL. Todos los derechos reservados. |{' '}
             <span className="text-cyan-400">Atención Domiciliaria Integral</span>
           </p>
