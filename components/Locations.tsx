@@ -26,7 +26,7 @@ const locations = [
     subtitle: 'Comunícate con nosotros',
     phone: '+54 9 3816 37-2613',
     email: 'corpussanati@gmail.com',
-    hours: 'L-V 8 a 14hs',
+    hours: 'Todos los días',
   },
 ];
 

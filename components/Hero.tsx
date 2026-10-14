@@ -35,7 +35,7 @@ export function Hero() {
           >
             <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span className="px-4 py-2 bg-cyan-50 border border-cyan-300 rounded-full text-sm text-cyan-700 font-semibold">
-              Atendemos en Tucumán · Lunes a viernes 8 a 14hs
+              Atendemos en Tucumán · Todos los días
             </span>
           </motion.div>
 

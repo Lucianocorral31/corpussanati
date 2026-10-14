@@ -46,10 +46,10 @@ export function Services() {
             Nuestro equipo
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-4 text-gray-900">
-            Servicios Especializados
+            ¿Qué incluye el servicio?
           </h2>
           <p className="text-lg text-gray-900 max-w-2xl">
-            Profesionales certificados en diferentes disciplinas, coordinados para brindar atención integral adaptada a cada paciente.
+            Dentro de nuestro servicio de atención domiciliaria integral coordinamos, según lo que cada paciente necesite, profesionales certificados en estas especialidades:
           </p>
         </motion.div>
 
@@ -79,14 +79,12 @@ export function Services() {
                   {service.description}
                 </p>
                 <a
-                  href={`https://wa.me/5493816372613?text=${encodeURIComponent(
-                    `Hola, quisiera consultar sobre el servicio de ${service.title}`
-                  )}`}
+                  href="https://wa.me/5493816372613?text=Hola%2C%20quisiera%20informarme%20sobre%20el%20servicio%20de%20atenci%C3%B3n%20domiciliaria%20integral"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-bold text-cyan-600 hover:text-cyan-700 transition-colors"
                 >
-                  Consultar disponibilidad
+                  Consultar por el servicio
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -98,8 +96,8 @@ export function Services() {
       </div>
 
       <InlineCTA
-        text="¿No estás seguro qué servicio necesitás? Contanos el caso."
-        message="Hola, no estoy seguro qué servicio necesito. Quisiera que me asesoren"
+        text="¿Querés conocer más sobre nuestro servicio de atención domiciliaria? Contanos el caso."
+        message="Hola, quisiera conocer más sobre el servicio de atención domiciliaria integral"
         button="Pedir asesoramiento"
       />
     </section>

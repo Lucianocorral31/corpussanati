@@ -6,7 +6,7 @@ const steps = [
   {
     number: '01',
     title: 'Nos contactás',
-    description: 'Escribinos por WhatsApp o llamanos y contanos la situación del paciente.',
+    description: 'Escribinos por WhatsApp y contanos la situación del paciente.',
   },
   {
     number: '02',

@@ -35,7 +35,7 @@ export function CTA() {
               viewport={{ once: true }}
               className="text-lg text-gray-700 mb-8 leading-relaxed"
             >
-              Ante cualquier duda o consulta, escribinos un mensaje. Estamos disponibles de lunes a viernes de 8 a 14hs para ayudarte.
+              Ante cualquier duda o consulta, escribinos un mensaje. Atendemos todos los días para ayudarte.
             </motion.p>
 
             <motion.div
